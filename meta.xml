@@ -1,0 +1,17 @@
+<meta>
+	<info author="hitech95" version="0.0.1" name="Trucker" type="script" />
+	
+	<script src="server.lua" />
+	<script src="client.lua" type="client" />
+	<script src="gui.lua" type="client" />
+	
+	<settings>
+		<setting name="*isDebug" value="[true]" />
+		<setting name="*illegal" value="[50]" />
+		<setting name="*illegalLevel" value="[1]" />
+		<setting name="*illegalMoltiplier" value="[8]" />
+		<setting name="*price" value="[10]" />
+	</settings>
+	
+	<config src="config.xml" />
+</meta>

@@ -1,0 +1,6 @@
+<trucks>
+		<truker name="LV Airport Truker Station" x="1643" y="1680" z="10" />
+		<truker name="SF Port Truker Station" x="-1707" y="90" z="3" />
+		<truker name="SF Airport Truker Station" x="-1267" y="17" z="14" />
+		<truker name="Angel Pine Sawmill" x="-2005" y="-2415" z="30" />
+</trucks>
