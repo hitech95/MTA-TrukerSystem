@@ -10,16 +10,23 @@ The price increase if the material is illegal or if the distance is more then 10
 
 This is a WIP (Work in Progess) so use the branch "dev" to see the code.
 
-TODO:
-*Add gui
-*Add dx-Message Info
-*Create tender and manage distance, price, ecc.
-*A lot of other things.
-*Clean up the code.
+TODO
+--------------------------------
+* Add gui
+* Add dx-Message Info
+* Create tender and manage distance, price, ecc.
+* A lot of other things.
+* Clean up the code.
 
-DONE:
-*Create config (to fix)
-*Load Config
-*on truker enter
-*add blips and marker on the map (client side)
-*only this? o.O
+DONE
+--------------------------------
+* Create config (to fix)
+* Load Config
+* on truker enter
+* add blips and marker on the map (client side)
+* only this? o.O
+
+License
+-------------------------------
+
+Undefined (For now may be Common....)
