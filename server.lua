@@ -95,7 +95,20 @@ end
 addEventHandler( "onVehicleEnter", root, onEnterVehicle)
 
 function onInfoRequest()
-	triggerClientEvent ( source, "onDrawGuiInfo", root, garagesInfo)
+	triggerClientEvent ( source, "onTrukerInfo", root, garagesInfo)
 end
 addEvent("onTrukerInfoRequest", true)
 addEventHandler("onTrukerInfoRequest", root, onInfoRequest)
+
+function onConfigRequest()
+
+	config["isDebugMode"] = isDebugMode
+	config["isDebugMode"] = illegal
+	config["price"] = price
+	config["illegalMoltiplier"] = illegalMoltiplier
+	config["illegalLevel"] = illegalLevel
+	
+	triggerClientEvent ( source, "onTrukerConfig", root, config)
+end
+addEvent("onTrukerClientStarted", true)
+addEventHandler("onTrukerClientStarted", root, onConfigRequest)

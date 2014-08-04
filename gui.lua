@@ -35,30 +35,37 @@ function populateGui(startions, cID)
 	local cY = startions[cID].y
 	local cZ = startions[cID].z
 	
+	guiSetText( guiLabel, "Current: " .. startions[cID].name )
+	
 	for id,station in pairs(startions) do
 		
-		if id == cID then return end
+		if not id == cID then
 		
-		local stuff = station.stuff
-		local row = guiGridListAddRow(guiList)
-		
-		local lX = station.x
-		local lY = station.y
-		local lZ = station.z
-		
-		local distance = distance3D(cX, cY, cZ, lX, lY, lZ)
-		
-		local price = priceCalc(distance, stuff.price, stuff.illegal)
-		
-		guiGridListSetItemText(guiList, row, 1, station.name, false, false)
-		guiGridListSetItemText(guiList, row, 2, distance, false, false)
-		guiGridListSetItemText(guiList, row, 3, getVehicleType(vehicle), false, false)
-		guiGridListSetItemText(guiList, row, 4, if stuff.illegal then 'Yes' else 'No' end, false, false)
-		guiGridListSetItemText(guiList, row, 5, stuff.name, false, false)
-		guiGridListSetItemText(guiList, row, 6, (price/distance), false, true)
-		
-		guiGridListSetItemData(guiList,row,1, id)
+			local stuff = station.stuff
+			local row = guiGridListAddRow(guiList)
+			
+			local lX = station.x
+			local lY = station.y
+			local lZ = station.z
+			
+			local distance = distance3D(cX, cY, cZ, lX, lY, lZ)
+			
+			local price = priceCalc(distance, stuff.price, stuff.illegal)
+			
+			guiGridListSetItemText(guiList, row, 1, station.name, false, false)
+			guiGridListSetItemText(guiList, row, 2, distance, false, false)
+			guiGridListSetItemText(guiList, row, 3, price, false, true)
+			guiGridListSetItemText(guiList, row, 4, if stuff.illegal then 'Yes' else 'No' end, false, false)
+			guiGridListSetItemText(guiList, row, 5, stuff.name, false, false)
+			guiGridListSetItemText(guiList, row, 6, (price/distance), false, true)
+			
+			guiGridListSetItemData(guiList,row,1, id)
+		end
 	end
+end
+
+function clearGui()
+	guiGridListClear ( guiList )
 end
 
 function showGui()
@@ -66,5 +73,13 @@ function showGui()
 		guiSetVisible(guiWindow,true)
 		toggleAllControls ( false, true, true)
 		showCursor(true,true)
+	end
+end
+
+function hideGui()
+	if guiGetVisible(guiWindow) then
+		guiSetVisible(guiWindow,false)
+		toggleAllControls ( true, true, true)
+		showCursor(false,false)
 	end
 end

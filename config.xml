@@ -3,4 +3,14 @@
 		<truker name="SF Port Truker Station" x="-1707" y="90" z="3" />
 		<truker name="SF Airport Truker Station" x="-1267" y="17" z="14" />
 		<truker name="Angel Pine Sawmill" x="-2005" y="-2415" z="30" />
+		
+		<stuff name="Gravel" isIllegal="false" price="150"/>
+		<stuff name="Food" isIllegal="false" price="300" />
+		<stuff name="Electronic" isIllegal="false" price="750" />
+		<stuff name="Weapons" isIllegal="true" price="1000" />
+		<stuff name="Nuclear Weapon" isIllegal="true" price="10000" />
+		<stuff name="Animal" isIllegal="false" price="500" />
+		<stuff name="Cars" isIllegal="false" price="500" />
+		<stuff name="Mechanic Stuff" isIllegal="false" price="250" />
+		<stuff name="Money" isIllegal="false" price="1500" />
 </trucks>
